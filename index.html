@@ -9,17 +9,23 @@
     <link rel="stylesheet" href="./css/styles.css">
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="./assets/logo.svg" alt="SimplyRecipes" id="nav-logo">
-        <i class="fas fa-align-justify"></i>
-        <div id="nav-links">
+        <div id="main-nav">
+            <a href="./index.html"><img src="./assets/logo.svg" alt="SimplyRecipes" id="nav-logo"></a>
+            <button id="nav-btn" class="main-btn"><i class="fas fa-align-justify"></i></button>
+        </div>
+        <div class="nav-links">
             <a href="index.html" class="nav-link">Home</a>
             <a href="about.html" class="nav-link">About</a>
             <a href="tags.html" class="nav-link">Tags</a>
             <a href="recipes.html" class="nav-link">Recipes</a>
-            <a href="contact.html" class="nav-link" id="contact-nav-link">Contact</a>
+            <a href="contact.html" class="nav-link"><button class="main-btn" id="contact-nav-link">Contact</button></a>
         </div>
     </header>
     <!-- JavaScript -->
