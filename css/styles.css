@@ -1,7 +1,8 @@
 /* variables */
 :root {
   --dark-blue: rgb(0, 47, 255);
-  margin: 2rem 1rem;
+  margin-top: 2rem;
+  --max-width: 1120px;
 }
 
 /* media screen for different width sizes */
@@ -96,9 +97,17 @@ body {
   color: white;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 
 /* NAV BAR */
+.nav-bar {
+  max-width: var(--max-width);
+  width: 90vw;
+  margin: 0 auto;
+  cursor: pointer;
+  height: 7rem;
+}
 
 /* main nav logo */
 #nav-logo {
@@ -142,11 +151,6 @@ body {
   height: 24rem;
 }
 
-/* .show-nav::before {
-  content: "idk how this worked but ok";
-  display: block;
-} */
-
 /* all nav links */
 .nav-link {
   display: block;
@@ -171,9 +175,70 @@ body {
   background: dodgerblue;
   padding: 0.38rem 0.94rem;
   margin: 0.5rem;
+  cursor: pointer;
 }
 
 #contact-nav-link:hover {
   color: white;
   background: var(--dark-blue);
 }
+
+@media only screen and (min-width: 768px) {
+  #nav-btn {
+    display: none;
+  }
+  #main-nav {
+    float: left;
+  }
+  .nav-links {
+    height: 3rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    top: 5px;
+  }
+  .nav-link {
+    border: none;
+    font-size: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  #contact-nav-link {
+    position: absolute;
+    right: 0;
+    font-size: 1rem;
+  }
+}
+/* end of navbar */
+
+/* footer */
+.footer {
+  background: rgba(128, 128, 128, 0.411);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+}
+
+#footer-text {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+#footer-text > span {
+  color: var(--dark-blue);
+}
+#footer-text > a {
+  text-decoration: none;
+  color: var(--dark-blue);
+}
+/* end of footer */
+
+/* page */
+main {
+  min-height: calc(100vh - (7rem + 4rem + 2rem));
+  max-width: var(--max-width);
+  width: 90%;
+  margin: 0 auto;
+}
+/* 7rem , nav bar , 4 rem footer , 2 rem top margin html */
