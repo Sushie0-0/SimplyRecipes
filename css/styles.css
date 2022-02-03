@@ -106,7 +106,7 @@ body {
   width: 90vw;
   margin: 0 auto;
   cursor: pointer;
-  height: 7rem;
+  min-height: 7rem;
 }
 
 /* main nav logo */
@@ -211,6 +211,15 @@ body {
 }
 /* end of navbar */
 
+/* page */
+main {
+  min-height: calc(100vh - (7rem + 4rem + 2rem));
+  max-width: var(--max-width);
+  width: 90vw;
+  margin: 0 auto;
+}
+/* 7rem , nav bar , 4 rem footer , 2 rem top margin html */
+
 /* footer */
 .footer {
   background: rgba(128, 128, 128, 0.411);
@@ -233,12 +242,3 @@ body {
   color: var(--dark-blue);
 }
 /* end of footer */
-
-/* page */
-main {
-  min-height: calc(100vh - (7rem + 4rem + 2rem));
-  max-width: var(--max-width);
-  width: 90%;
-  margin: 0 auto;
-}
-/* 7rem , nav bar , 4 rem footer , 2 rem top margin html */
