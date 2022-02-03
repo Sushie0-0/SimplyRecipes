@@ -3,6 +3,7 @@
   --dark-blue: rgb(0, 47, 255);
   margin-top: 2rem;
   --max-width: 1120px;
+  --border-radius: 0.25rem;
 }
 
 /* media screen for different width sizes */
@@ -93,7 +94,7 @@
 }
 
 body {
-  background: black;
+  background: rgba(0, 0, 0, 0.95);
   color: white;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -105,7 +106,6 @@ body {
   max-width: var(--max-width);
   width: 90vw;
   margin: 0 auto;
-  cursor: pointer;
   min-height: 7rem;
 }
 
@@ -123,6 +123,7 @@ body {
 #nav-btn {
   width: 2.5rem;
   height: 1.56rem;
+  cursor: pointer;
 }
 
 #nav-btn:hover {
@@ -165,7 +166,7 @@ body {
 }
 
 .nav-link:hover {
-  color: dodgerblue;
+  color: var(--dark-blue);
 }
 
 /* Contact link */
@@ -219,6 +220,7 @@ main {
   margin: 0 auto;
 }
 /* 7rem , nav bar , 4 rem footer , 2 rem top margin html */
+/* end of page */
 
 /* footer */
 .footer {
@@ -242,3 +244,96 @@ main {
   color: var(--dark-blue);
 }
 /* end of footer */
+
+/* home page */
+
+/* home page header */
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/assets/main.jpeg);
+  background-size: cover;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
+}
+
+.main-header > h1 {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.main-header > h4 {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+/* end of home page header */
+
+/* home page content */
+
+.main-content-link {
+  display: block;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.main-content-link > img {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.main-content-link > h5 {
+  color: white;
+  font-size: 1.25rem;
+  margin: 0;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.main-content-link > p {
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.5rem;
+}
+
+.tags-container {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.tags-container > h4 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.tag-links {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 5.25rem;
+  margin-bottom: 0;
+}
+
+.tag {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.tag:hover {
+  color: var(--dark-blue);
+}
+
+/* home page content end */
+
+/* end of home page */
