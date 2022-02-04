@@ -8,3 +8,7 @@ navBtn.addEventListener("click" , function() {
         navLinks.classList.add("show-nav")
     }
 })
+
+const footerYear = document.getElementById("footer-year")
+const currentDate = new Date
+footerYear.textContent = currentDate.getFullYear()
