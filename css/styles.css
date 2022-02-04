@@ -175,7 +175,7 @@ main {
   flex-direction: column;
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(./assets/main.jpeg);
+    url("/assets/main.jpeg");
   background-size: cover;
   letter-spacing: 2px;
   margin-bottom: 2rem;
