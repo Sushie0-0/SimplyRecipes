@@ -11,6 +11,7 @@
   background: dodgerblue;
   border: 0px;
   border-radius: 3px;
+  color: white;
 }
 
 body {
@@ -19,6 +20,11 @@ body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   margin: 0;
+}
+
+::selection {
+  background: white;
+  color: black;
 }
 
 /* NAV BAR */
@@ -175,7 +181,7 @@ main {
   flex-direction: column;
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/main.jpeg");
+    url(../assets/main.jpeg);
   background-size: cover;
   letter-spacing: 2px;
   margin-bottom: 2rem;
@@ -278,6 +284,7 @@ main {
   display: grid;
   grid-row-gap: 2rem;
   margin-bottom: 2.5rem;
+  max-width: 40rem;
 }
 
 .about-text > h2 {
@@ -329,6 +336,212 @@ main {
 
 /* end of about page */
 
+/* tags page */
+
+.tags-container {
+  display: grid;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+.tags-link {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background: #7fb7be;
+  border-radius: var(--border-radius);
+  padding: 0.8rem;
+  margin: 1rem 0;
+  transition: background 1s;
+}
+
+.tags-link:hover {
+  transition: all 1s;
+  background: var(--dark-blue);
+}
+
+.tags-link > h5 {
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tags-link > p {
+  margin: 0;
+  margin-top: 0.4rem;
+}
+
+/* end of tags page */
+
+/* single recipe page */
+
+/* single recipe upper */
+.single-recipe-upper {
+  margin-bottom: 5rem;
+}
+
+.single-recipe-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-recipe-image {
+  min-height: 300px;
+  height: 18.75rem;
+  margin-bottom: 3rem;
+}
+
+.single-recipe-image > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+}
+
+.single-recipe-text {
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+
+.single-recipe-text > h2 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.single-recipe-text > p {
+  line-height: 2rem;
+}
+
+.single-recipe-icons {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+
+.icons-div {
+  text-align: center;
+  width: 33.33%;
+}
+
+.icons-div > i {
+  font-size: 1.5rem;
+}
+
+.icons-div > h5 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.icons-div > p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.single-recipe-tags {
+  font-size: 0.8rem;
+}
+
+.tag-template-btn {
+  padding: 0.3rem 0.9rem;
+  margin: 0 0.2rem;
+}
+
+.tag-template-btn:hover {
+  background: var(--dark-blue);
+  cursor: pointer;
+}
+/* single recipe upper end */
+
+/* single recipe lower */
+
+/* single recipe instructions */
+
+.recipe-lower-heading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.instructions-header {
+  display: flex;
+  align-items: center;
+}
+
+.instructions-header > p {
+  font-size: 1.1rem;
+  width: 5rem;
+  margin-right: 3rem;
+  font-weight: 600;
+  color: dodgerblue;
+  margin: 0;
+  float: left;
+}
+
+.instructions-header > div {
+  display: inline;
+  background: #7fb7be;
+  height: 0.06rem;
+  width: 100%;
+}
+
+.instructions-section > p {
+  max-width: 40rem;
+}
+
+.single-recipe-instructions {
+  margin-bottom: 4rem;
+}
+
+/* single recipe instructions end */
+
+/* single recipe essentials */
+
+/* ingredients */
+
+.essentials-ingredients {
+  margin-bottom: 4rem;
+}
+
+.ingredients-text > div {
+  background: #7fb7be;
+  height: 0.06rem;
+  width: 100%;
+}
+
+/* end of ingredients */
+
+/* tools */
+
+.essentials-tools {
+  margin-bottom: 4rem;
+}
+
+.tools-text > p {
+  color: dodgerblue;
+}
+
+.tools-text > div {
+  background: #7fb7be;
+  height: 0.06rem;
+  width: 100%;
+}
+
+/* end of tools */
+
+/* single recipe essentials end */
+
+/* single recipe lower end */
+
+/* end of single recipe page */
+
 /* for phones */
 [class*="col-"] {
   width: 100%;
@@ -356,6 +569,10 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  .tags-container {
+    grid-template-areas: "auto auto";
+    gap: 2rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -365,6 +582,9 @@ main {
 }
 
 @media screen and (min-width: 992px) {
+  .col-b-3 {
+    width: 27%;
+  }
   .col-b-4 {
     width: 33.33%;
   }
@@ -393,6 +613,9 @@ main {
   .about-main {
     display: flex;
     justify-content: space-between;
+  }
+  .tags-container {
+    grid-template-areas: "auto auto auto";
   }
 }
 
